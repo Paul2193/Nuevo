@@ -1,5 +1,3 @@
-#Probando
-import numpy as np
-print("Holaaa")
-#hsadhasd
-#fhhfh
+import streamlit as st
+st.title("Mi primera pagina")
+st.header("hola")
