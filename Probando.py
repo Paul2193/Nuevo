@@ -5,16 +5,23 @@ st.header("hola")
 st.text("probando probando")
 st.text("probando probando1111")
 
-
+import streamlit as st
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Datos de ejemplo
+# Título
+st.title("Boxplot Simple en Streamlit")
+
+# Datos generados aleatoriamente o definidos
 datos = [7, 15, 13, 17, 19, 21, 25, 30, 22, 18]
 
-# Crear el boxplot
-plt.boxplot(datos)
-plt.title("Boxplot simple")
-plt.ylabel("Valores")
-plt.grid(True)
-plt.show()
+# Crear figura
+fig, ax = plt.subplots()
+ax.boxplot(datos)
+ax.set_title("Diagrama de Caja (Boxplot)")
+ax.set_ylabel("Valores")
+ax.grid(True)
+
+# Mostrar en Streamlit
+st.pyplot(fig)
 
