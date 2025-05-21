@@ -6,23 +6,15 @@ st.text("probando probando")
 st.text("probando probando1111")
 
 
-# Título de la app
-st.title("Gráfica Simple con Matplotlib y Streamlit")
+import matplotlib.pyplot as plt
 
 # Datos de ejemplo
-x = [1, 2, 3, 4, 5]
-y = [2, 3, 5, 7, 11]
+datos = [7, 15, 13, 17, 19, 21, 25, 30, 22, 18]
 
-# Crear la figura y los ejes
-fig, ax = plt.subplots()
-ax.plot(x, y, marker='o', linestyle='-', label='Datos de ejemplo')
+# Crear el boxplot
+plt.boxplot(datos)
+plt.title("Boxplot simple")
+plt.ylabel("Valores")
+plt.grid(True)
+plt.show()
 
-# Personalización
-ax.set_title('Gráfica de Línea Simple')
-ax.set_xlabel('Eje X')
-ax.set_ylabel('Eje Y')
-ax.grid(True)
-ax.legend()
-
-# Mostrar la gráfica en Streamlit
-st.pyplot(fig)
